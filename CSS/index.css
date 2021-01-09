@@ -1,0 +1,400 @@
+/* 初始化样式 */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #222;
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* 设置header 背景色为红色 */
+#header {
+  background-color: #bd2635;
+}
+/* top为弹性布局 */
+.top {
+  display: flex;
+  justify-content: space-between;
+  height: 144px;
+}
+/* topRight */
+.topRight {
+  margin-right: 100px;
+}
+/* sc */
+.sc {
+  padding: 30px 0 0 30px;
+  margin-bottom: 20px;
+}
+.sc span {
+  font-size: 12px;
+}
+.sc a {
+  color: #fff;
+  font-size: 14px;
+}
+.sc a:hover {
+  color: #ff0;
+}
+
+/* szxy */
+.szxy a {
+  display: inline-block;
+  width: 114px;
+  height: 47px;
+  line-height: 47px;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #bd2635;
+  font-weight: 700;
+  margin-right: 5px;
+}
+.szxy a:hover {
+  background-color: #fff;
+  color: #bd2635;
+}
+
+
+/* nav 背景 */
+nav {
+  background-color: #eee;
+  height: 42px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  height: 42px;
+  line-height: 42px;
+}
+/* 设置下拉菜单跟a标签的样式 */
+nav a,
+.el-dropdown-link {
+  display: inline-block;
+  width: 132px;
+  color: #333;
+  text-align: center;
+  line-height: 42px;
+}
+/* 鼠标移入的效果 */
+nav a:hover,
+.el-dropdown-link:hover {
+  background-color: #ddd;
+}
+/* 下拉菜单添加小手 */
+.el-dropdown-link {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 轮播图 */
+#car .swiper-container {
+  width: 927px;
+  height: 385px;
+  margin-top: 3px;
+}
+
+
+/* fast样式 */
+.fast{
+  width: 260px;
+  height: 413px;
+  background-color: #EEEEEE;
+  margin-top: 3px;
+}
+/* 快速通道 */
+.fastTitle {
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  background-color: #BE2634;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+}
+/* 快速通道入口 */
+.detail {
+  padding-top: 10px;
+}
+.detail a {
+  display: block;
+  padding-top: 13px;
+  text-align: center;
+}
+
+/* picmenu 样式 */
+/* 给包裹住pic的盒子变成弹性布局 */
+.picmenu {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0 30px 0;
+}
+.picmenu .name {
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 2px solid transparent;
+}
+.picmenu .name:hover {
+  border-bottom: 2px solid #be2634;
+}
+
+
+/* tab栏 */
+
+#tab {
+  width: 660px;
+  height: 283px;
+  background: #eee;
+  color: #eee;
+}
+
+.tab-bar {
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+}
+.tab-bar a {
+  display: inline-block;
+  width: 136px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  /* border-right: 3px solid #ddd; */
+}
+.tab-bar span {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 12px;
+  color: #222;
+  text-align: center;
+  margin-left: 95px;
+  cursor: pointer;
+}
+.tab-bar span:hover {
+  color: #be2634;
+}
+
+.tab-con {
+  display: flex;
+  justify-content: space-between;
+}
+.tab-Left {
+  width: 350px;
+  padding: 10px;
+}
+.tab-Left li {
+  display: flex;
+  justify-content: space-between;
+}
+.tab-Left a {
+  display: inline-block;
+  width: 270px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  color: #222;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.tab-Left a:hover {
+  color: #be2634;
+}
+.tab-Left span {
+  width: 33px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 12px;
+}
+.tab-Right {
+  width: 240px;
+  height: 180px;
+  margin: 15px 50px 0 0;
+}
+.tab-Right .swiper-container {
+  height: 150px;
+}
+.tab-Right p {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #222;
+  font-weight: 600;
+}
+
+.red {
+  background-color: #be2635;
+  color: #fff !important;
+}
+
+
+/* conRight */
+
+#conRigth {
+  width: 510px;
+  height: 283px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gs {
+  /* width: 100%; */
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 18px;
+  background-color: #bf2634;
+  color: #fff;
+  text-align: center;
+}
+
+.tz {
+  width: 300px;
+  height: 180px;
+  background-color: #eee;
+}
+.tz .til {
+  display: flex;
+  justify-content: space-between;
+}
+.tz .til span:last-child {
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.tz .til span:last-child:hover {
+  color: #bf2634;
+}
+.cont {
+  width: 100%;
+  height: 110px;
+  padding: 10px;
+  overflow: hidden;
+  padding: 10px;
+}
+.cont a {
+  display: inline-block;
+  width: 250px;
+  height: 20px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+}
+.cont a:hover {
+  color: #bf2634;
+}
+
+.gz {
+  width: 200px;
+  height: 180px;
+  background-color: #eee;
+}
+
+.QR img {
+  width: 75px;
+  margin: 20px 0 0 15px;
+}
+.QR span {
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px 0 0 30px;
+}
+
+/* blogRoll */
+#roll {
+  padding: 10px 0 10PX 0;
+}
+#roll ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+}
+#roll ul span:first-child {
+  font-weight: 600;
+}
+#roll li a {
+  padding: 0 20px;
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  height: 130px;
+  background-color: #be2634;
+}
+.footer {
+  display: flex;
+  justify-content: flex-start;
+}
+.ewm-b {
+  width: 100px;
+  padding: 20px 0 0 150px;
+  display: flex;
+  justify-content: space-around;
+}
+.ewm-b img {
+  width: 75px;
+  margin: 0 5px;
+}
+.ewm-b p {
+  display: block;
+  width: 75px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+.addr {
+  width: 320px;
+  padding: 20px 0 0 50px;
+  font-size: 12px;
+}
+.addr  p {
+  height: 20px;
+  line-height: 20px;
+  color: #fff;
+}
+.smrz {
+  width: 260px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.smrz p {
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 5px;
+}

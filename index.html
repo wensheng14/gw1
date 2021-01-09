@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学校官网</title>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="./CSS/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="./CSS/swiper.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- header -->
+    <div id="header">
+      <div class="top w">
+        <!-- logo -->
+        <div class="logo">
+          <img :src="logoUrl" alt />
+        </div>
+        <!-- topRight -->
+        <div class="topRight">
+          <div class="sc">
+            <a href="#">设为首页</a>
+            <span>&nbsp;|&nbsp;</span>
+            <a href="#">加入收藏</a>
+          </div>
+          <div class="szxy">
+            <a href="#">学习中心</a>
+            <a href="./login.html">数字校园</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- nav -->
+    <nav>
+      <ul class="w">
+        <li v-for="(item, index) in data" :key="index">
+          <template v-if="item.sub">
+            <el-dropdown>
+              <span class="el-dropdown-link">
+                {{ item.title }}
+              </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item v-for="item in item.sub" :key="item.id">
+                  <a href="#">{{item.name}}</a>
+                </el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </template>
+          <template v-else>
+            <a href="#">{{ item.name }}</a>
+          </template>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div class="flex w" id="car">
+      <div class="swiper-container car">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="(item,index) in carUrl" :key="index">
+            <img :src="item.imgUrl" alt="" width="100%" height="100%">
+          </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class=" swiper-pagination"></div>
+
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+      <div class="fast">
+        <div class="fastTitle">快速通道</div>
+        <div class="detail">
+          <a href="#" v-for="item in fastUrl" :key="item.id">
+            <img :src="item.url" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- picmenu -->
+    <div class="picmenu w">
+      <div class="pic" v-for="item in picData" :key="item.id">
+        <a href="#">
+          <img :src="item.url" alt="">
+        </a>
+        <a href="#" class="name">{{item.name}}</a>
+      </div>
+    </div>
+
+
+    <!-- tab栏 -->
+    <div class="flex w">
+      <!-- tab -->
+      <div id="tab" class="w">
+        <div class="tab-bar">
+          <a href="javscript:;" v-for="(item, index) in items" :key="index" @mouseover="tab(index)"
+            :class="{ red: index === curId }">{{ item.item }}</a>
+          <span>了解更多</span>
+        </div>
+        <div class="tab-con">
+          <ul class="tab-Left" v-show="index === curId" v-for="(item,index) in contents" :key="index">
+            <li v-for="(item,index) in item" :key="index">
+              <a href="#">{{item.item}}</a>
+              <span>{{item.time}}</span>
+            </li>
+          </ul>
+          <div class="tab-Right">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="(item,index) in c" :key="index">
+                  <img :src="item.url" alt="" width="100%">
+                </div>
+              </div>
+              <!-- 如果需要分页器 -->
+              <div class=" swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- conRight -->
+      <div id="conRigth">
+        <div class="gs">
+          <div class="tz">
+            <div class="til">
+              <span class="title">通知公告</span>
+              <span>了解更多</span>
+            </div>
+            <ul class="cont">
+              <li v-for="(item,index) in conts" :key="index">
+                <a href="#">{{item}}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="gz">
+            <div class="til">
+              <span class="title">关注我们</span>
+            </div>
+            <div class="QR">
+              <img src="../images/ma.png" alt="" />
+              <img src="../images/ma.png" alt="" />
+              <span>官网微信</span>
+              <span>联系我们</span>
+            </div>
+          </div>
+        </div>
+        <div class="img">
+          <img src="../images/img1.jpg" alt="" width="100%" height="93px" />
+        </div>
+      </div>
+    </div>
+
+    <!-- blogRoll -->
+    <div id="roll" class="w">
+      <ul>
+        <span>友情链接：</span>
+        <li v-for="(item,index) in roll" :key="index">
+          <a href="#">{{item}}</a>
+          <span>|</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="w footer">
+        <div class="ewm-b">
+          <div>
+            <img src="../images/ma.png" alt="" />
+            <p>广州技工学校</p>
+          </div>
+          <div>
+            <img src="../images/ma.png" alt="" />
+            <p>扫一扫</p>
+          </div>
+        </div>
+        <div class="addr">
+          <p>版权所有：广州技工学校</p>
+          <p>招生热线：*************** 传真：********</p>
+          <p>地址：广州市某某环市东路***号 邮编：******</p>
+        </div>
+        <div class="smrz">
+          <div>
+            <p>粤ICP备*****号</p>
+            <img src="../images/bottom_small_img.png" alt="">
+          </div>
+          <div>
+            <p>粤公网安备 ********号</p>
+            <img src="../images/icon3.png" alt="">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  </div>
+</body>
+
+</html>
+<!-- 引入组件库 -->
+<script src="./JS/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="./JS/swiper.min.js"></script>
+<script src="./JS/index.js"></script>

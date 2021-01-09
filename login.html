@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数字校园</title>
+  <link rel="stylesheet" href="./CSS/login.css">
+</head>
+
+<body>
+  <div id="login">
+    <header>
+      <img src="../images/logo.png" alt="">
+    </header>
+    <div id="bg">
+      <div class="contbox">
+        <div class="dlsm">
+          <h3>登录说明</h3>
+          <ul>
+            <li>
+              <img src="../images/1.png" alt="" />
+              用户首次登录密码为个人身份证号后6位，登录成功后需绑定手机号码及设置密码，密码最小长度为8位，最大长度为20位，密码至少包含一个数字、一个字母以及一个特殊字符。
+            </li>
+            <li>
+              <img src="../images/1.png" alt="" />
+              为确保系统的稳定性，建议使用谷歌浏览器、360浏览器（极速模式）、火狐浏览器。
+              在使用过程中如有问题请通过电话、邮箱、QQ群与我们联系。电话：*********
+            </li>
+            <li>
+              <img src="../images/1.png" alt="" />
+              请保护好系统的账号和密码，一旦您访问过那些需要提供凭证信息的应用系统时，请操作完成之后关闭浏览器。
+            </li>
+          </ul>
+          <div class="ewm">
+            <p>请扫描二维码联系我们</p>
+            <div>
+              <img src="..//images/ma.png" alt="" width="75px" />
+              <p>联系微信</p>
+            </div>
+          </div>
+        </div>
+        <div class="loginBox">
+          <ul class="tab">
+            <li class="active">账号登录</li>
+            <li>短信登录</li>
+            <li>企业微信登录</li>
+          </ul>
+          <div id="login">
+            <div class="form">
+              <span class="hint">{{hint}}</span>
+              <div class="row">
+                <span>用户名：</span>
+                <input class="ipt" @blur="checkName" v-model="name" type="text" name="username" autocomplete="off"
+                  placeholder="职工号/学生号" />
+              </div>
+              <div class="row">
+                <span>密&emsp;码：</span>
+                <input class="ipt" v-model="pwd" type="password" name="pwd" autocomplete="off"
+                  placeholder="初始密码为身份证后六位" />
+              </div>
+              <div class="row">
+                <span>验证码：</span>
+                <input @blur="Captcha" class="captcha" v-model="captcha" type="text" name="captcha" autocomplete="off"
+                  placeholder="请输入验证码" />
+                <img @click="imgSrc" class="imgSrc" src="http://localhost/php/vaildcode.php" alt="" />
+              </div>
+              <button class="btn" type="button" @click="btn">登录</button>
+            </div>
+          </div>
+          <div class="wjmm">
+            <a href="#">忘记密码？</a>
+            <a href="#">常见问题</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>版权所有 © 2020 ******</p>
+    </footer>
+  </div>
+</body>
+
+</html>
+<script src="./JS/vue.js"></script>
+<script src="./JS/jquery-3.5.1.js"></script>
+<script src="./JS/login.js"></script>
